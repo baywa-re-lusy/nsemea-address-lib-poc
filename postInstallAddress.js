@@ -3,14 +3,14 @@ const fs = require('fs');
 const path = require('path');
 
 let source = path.join(process.cwd(),"src/Typescripts/Entities");
-let destination = '../../src/Typescripts/Address/Entities';
-console.log(`copying NSEMEA address library from ${source} to ${destination}`);
+let destination = '../../src/Typescripts/Entities';
+console.log(`copying NSEMEA purchase library from ${source} to ${destination}`);
 fsExtra.copy(source,destination,{ preserveTimestamps:true}, err => {
   console.error(err);
 });
 
 source = path.join(process.cwd(),"src/Typescripts/Services");
-destination = '../../src/Typescripts/Address/Services';
+destination = '../../src/Typescripts/Services';
 console.log(`copying NSEMEA purchase library from ${source} to ${destination}`);
 fsExtra.copy(source,destination,{ preserveTimestamps:true}, err => {
   console.error(err);
@@ -18,7 +18,7 @@ fsExtra.copy(source,destination,{ preserveTimestamps:true}, err => {
 
 console.log(`path : ${__dirname}`);
 const gitignorePath = path.resolve(__dirname, '../../.gitignore');
-const entriesToAdd = ['src/Typescripts/Address'];
+const entriesToAdd = ['src/Typescripts/Entities/Address.ts','src/Typescripts/Entities/AddressService.ts'];
 
 fs.readFile(gitignorePath, 'utf8', (err, data) => {
   if (err) {

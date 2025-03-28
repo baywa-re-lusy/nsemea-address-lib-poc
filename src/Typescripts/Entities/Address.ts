@@ -1,4 +1,4 @@
-import { AddressBase } from "./AddressBase";
+import { AddressBase } from "../Core/DataAccess/AddressBase";
 
 export class Address extends AddressBase {
 
