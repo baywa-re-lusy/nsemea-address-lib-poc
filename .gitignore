@@ -4,5 +4,5 @@ yarn-error.log
 dist
 node_modules
 **/.DS_Store
-src/Typescripts/Core
+src/Typescripts/modules
 tests/__mock__/N
