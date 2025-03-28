@@ -2,23 +2,23 @@ const fsExtra = require('fs-extra');
 const fs = require('fs');
 const path = require('path');
 
-let source = path.join(process.cwd(),"src/Typescripts/Entities");
-let destination = '../../src/Typescripts/Entities';
-console.log(`copying NSEMEA purchase library from ${source} to ${destination}`);
+let source = path.join(process.cwd(),"src/Typescripts/Core");
+let destination = '../../src/Typescripts/Core';
+console.log(`copying NSEMEA core library from ${source} to ${destination}`);
 fsExtra.copy(source,destination,{ preserveTimestamps:true}, err => {
   console.error(err);
 });
 
-source = path.join(process.cwd(),"src/Typescripts/Services");
-destination = '../../src/Typescripts/Services';
-console.log(`copying NSEMEA purchase library from ${source} to ${destination}`);
+source = path.join(process.cwd(),"tests/__mock__/N");
+destination = '../../tests/__mock__/N';
+console.log(`copying mocked Netsuite record from ${source} to ${destination}`);
 fsExtra.copy(source,destination,{ preserveTimestamps:true}, err => {
   console.error(err);
 });
 
 console.log(`path : ${__dirname}`);
 const gitignorePath = path.resolve(__dirname, '../../.gitignore');
-const entriesToAdd = ['src/Typescripts/Entities', 'src/Typescripts/Services'];
+const entriesToAdd = ['src/Typescripts/Core', 'tests/__mock__/N'];
 
 console.log(`gitignorePath ${gitignorePath}`);
 
