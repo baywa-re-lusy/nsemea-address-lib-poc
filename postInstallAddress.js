@@ -26,7 +26,7 @@ fsExtra.copy(source,destination,{ preserveTimestamps:true}, err => {
 console.log(`# path : ${__dirname}`);
 console.log(`# path : ${path.join(process.cwd(), '.gitignore')}`);
 const gitignorePath = path.join(process.cwd(), '.gitignore');
-const entriesToAdd = ['src/Typescripts/Address', 'tests/__mock__/N'];
+const entriesToAdd = ['src/Typescripts/Address'];
 
 fs.readFile(gitignorePath, 'utf8', (err, data) => {
   if (err) {
