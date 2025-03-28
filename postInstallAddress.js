@@ -3,14 +3,14 @@ const fs = require('fs');
 const path = require('path');
 
 let source = path.join(process.cwd(),"src/Typescripts/Entities");
-let destination = '../../src/Typescripts/modules/Address/Entities';
+let destination = '../../src/Typescripts/modules/Entities';
 console.log(`copying NSEMEA purchase library from ${source} to ${destination}`);
 fsExtra.copy(source,destination,{ preserveTimestamps:true}, err => {
   console.error(err);
 });
 
 source = path.join(process.cwd(),"src/Typescripts/Services");
-destination = '../../src/Typescripts/modules/Address/Services';
+destination = '../../src/Typescripts/modules/Services';
 console.log(`copying NSEMEA purchase library from ${source} to ${destination}`);
 fsExtra.copy(source,destination,{ preserveTimestamps:true}, err => {
   console.error(err);
