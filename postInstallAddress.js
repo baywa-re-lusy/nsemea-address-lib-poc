@@ -16,16 +16,8 @@ fsExtra.copy(source,destination,{ preserveTimestamps:true}, err => {
   console.error(err);
 });
 
-source = path.join(process.cwd(),"tests/__mock__/N");
-destination = '../../tests/__mock__/N';
-console.log(`copying mocked Netsuite record from ${source} to ${destination}`);
-fsExtra.copy(source,destination,{ preserveTimestamps:true}, err => {
-  console.error(err);
-});
-
-console.log(`# path : ${__dirname}`);
-console.log(`# path : ${path.join(process.cwd(), '.gitignore')}`);
-const gitignorePath = path.join(process.cwd(), '.gitignore');
+console.log(`path : ${__dirname}`);
+const gitignorePath = path.resolve(__dirname, '../../.gitignore');
 const entriesToAdd = ['src/Typescripts/Address'];
 
 fs.readFile(gitignorePath, 'utf8', (err, data) => {
